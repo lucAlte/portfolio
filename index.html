@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luc Alfonsi, product builder</title>
+<meta name="description" content="Portfolio de Luc Alfonsi, product builder entre Lyon et Paris : discovery, automatisation avec n8n et Monday.com, conception de produits SaaS.">
+<meta name="author" content="Luc Alfonsi">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Luc Alfonsi, product builder">
+<meta property="og:description" content="Je transforme les irritants des équipes en outils qu’elles adoptent. Projets, expériences et compétences.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Cpath d='M16 6.5l4.5 4.5-4.5 4.5-4.5-4.5z M8.5 15.5l7.5 7.5 7.5-7.5' fill='none' stroke='%23ff8f62' stroke-width='2.2' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" href="inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#recherche">Aller au contenu</a>
+
+<header class="hero" id="accueil">
+  <div class="frame" id="frame">
+    <canvas class="ring" id="ring" aria-hidden="true"></canvas>
+    <canvas class="ring-bloom" id="ring-bloom" aria-hidden="true"></canvas>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="brand" href="#accueil">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.6 16.4 8 12 12.4 7.6 8Z M4.6 11.6 12 19l7.4-7.4" fill="none" stroke="#fff" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+        <span>Luc Alfonsi</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-pill">
+          <a href="#projets">Projets</a>
+          <a href="#experiences">Expériences</a>
+          <a href="#competences">Compétences</a>
+        </div>
+        <a class="nav-cta" href="mailto:alfonsi.groupe@gmail.com">Me contacter</a>
+      </div>
+    </nav>
+
+    <div class="headline">
+      <h1 class="sr-only">Luc Alfonsi, product builder</h1>
+      <p class="word-row" aria-hidden="true"><span class="word" id="word">Écouter</span><span class="caret" id="caret"></span></p>
+      <p class="subline">Luc Alfonsi, product builder entre Lyon et Paris.<br>Je transforme les irritants des équipes en outils qu’elles adoptent.</p>
+      <a class="hero-btn" href="#projets">Voir mes projets</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <!-- Recherche -->
+  <section class="search" id="recherche" aria-labelledby="search-title">
+    <div class="search-inner">
+      <h2 id="search-title">Trouver une compétence ou une expérience</h2>
+      <p class="search-lede">Tapez un outil, une méthode ou un secteur&#8239;: la page vous y emmène.</p>
+      <form class="search-form" id="search-form" role="search" autocomplete="off">
+        <label class="sr-only" for="search-input">Rechercher une compétence ou une expérience</label>
+        <div class="search-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input id="search-input" type="search" name="q" placeholder="Ex. n8n, Figma, tests A/B, SAV…" enterkeyhint="search" spellcheck="false">
+          <button class="search-submit" type="submit">Rechercher</button>
+        </div>
+      </form>
+      <ul class="chips" aria-label="Recherches suggérées">
+        <li><button class="chip" type="button" data-q="n8n">n8n</button></li>
+        <li><button class="chip" type="button" data-q="Monday.com">Monday.com</button></li>
+        <li><button class="chip" type="button" data-q="Supabase">Supabase</button></li>
+        <li><button class="chip" type="button" data-q="Figma">Figma</button></li>
+        <li><button class="chip" type="button" data-q="Tests A/B">Tests A/B</button></li>
+        <li><button class="chip" type="button" data-q="Roadmap">Roadmap</button></li>
+        <li><button class="chip" type="button" data-q="Web Bluetooth">Web Bluetooth</button></li>
+      </ul>
+      <div class="search-status" id="search-status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <section class="section" id="projets" data-search-scope aria-labelledby="projets-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="projets-title">Projets personnels</h2>
+        <p>Deux produits que je conçois et code moi-même, de l’idée au déploiement.</p>
+      </div>
+
+      <!-- RideDeck -->
+      <article class="case" id="ridedeck" data-title="RideDeck">
+        <div class="case-head">
+          <div>
+            <h3>RideDeck</h3>
+            <p class="case-tag">Transformer un home trainer classique en séance guidée, sur PC comme sur iPad.</p>
+          </div>
+          <dl class="meta">
+            <div><dt>Rôle</dt><dd>Conception et développement</dd></div>
+            <div><dt>Supports</dt><dd>PC et iPad</dd></div>
+            <div><dt>Statut</dt><dd>En développement</dd></div>
+          </dl>
+        </div>
+
+        <figure class="visual">
+          <div class="visual-frame">
+            <svg viewBox="0 0 1200 700" role="img" aria-labelledby="rd-t" font-family="Inter, system-ui, sans-serif">
+              <title id="rd-t">Écran de séance RideDeck : niveau de résistance 6 pour une pente de 4,2 %, profil du parcours, cardio, cadence, vitesse et historique synchronisé</title>
+              <defs>
+                <linearGradient id="rd-word" x1="0" y1="1" x2="1" y2="0"><stop offset=".28" stop-color="#fffaf6"/><stop offset=".55" stop-color="#ffd2b8"/><stop offset=".8" stop-color="#ff9a6c"/><stop offset="1" stop-color="#ff7a4c"/></linearGradient>
+                <linearGradient id="rd-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a4c" stop-opacity=".42"/><stop offset="1" stop-color="#ff548a" stop-opacity="0"/></linearGradient>
+                <clipPath id="rd-done"><rect x="0" y="0" width="390" height="700"/></clipPath>
+                <clipPath id="rd-todo"><rect x="390" y="0" width="810" height="700"/></clipPath>
+              </defs>
+              <rect width="1200" height="700" fill="#060608"/>
+              <!-- barre du haut -->
+              <g>
+                <rect x="40" y="20" width="26" height="26" rx="7" fill="none" stroke="#ff8f62" stroke-width="2"/>
+                <path d="M47 38l6-12 6 12" fill="none" stroke="#ff8f62" stroke-width="2" stroke-linejoin="round"/>
+                <text x="78" y="40" font-size="19" font-weight="600" fill="#fff">RideDeck</text>
+                <rect x="736" y="17" width="176" height="32" rx="16" fill="none" stroke="rgba(255,255,255,.14)"/>
+                <circle cx="755" cy="33" r="4.5" fill="#3fcf7f"/>
+                <text x="767" y="38" font-size="13.5" fill="rgba(255,255,255,.85)">Cardio connecté</text>
+                <rect x="924" y="17" width="182" height="32" rx="16" fill="none" stroke="rgba(255,255,255,.14)"/>
+                <circle cx="943" cy="33" r="4.5" fill="#3fcf7f"/>
+                <text x="955" y="38" font-size="13.5" fill="rgba(255,255,255,.85)">Capteur Bluetooth</text>
+                <circle cx="1142" cy="33" r="17" fill="#1b1b21" stroke="rgba(255,255,255,.14)"/>
+                <text x="1142" y="38" font-size="12.5" font-weight="600" fill="#fff" text-anchor="middle">LA</text>
+                <line x1="0" y1="66" x2="1200" y2="66" stroke="rgba(255,255,255,.08)"/>
+              </g>
+              <!-- consigne -->
+              <g>
+                <rect x="40" y="92" width="740" height="236" rx="18" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+                <text x="72" y="136" font-size="17" fill="rgba(255,255,255,.55)">Réglez la résistance</text>
+                <text x="68" y="236" font-size="96" font-weight="600" letter-spacing="-3" fill="url(#rd-word)">Niveau 6</text>
+                <text x="566" y="136" font-size="15" fill="rgba(255,255,255,.5)">Pente actuelle</text>
+                <text x="566" y="190" font-size="46" font-weight="600" letter-spacing="-1.2" fill="#fff">+4,2 %</text>
+                <text x="566" y="218" font-size="15" fill="rgba(255,255,255,.5)">sur 600 m</text>
+                <rect x="72" y="262" width="676" height="40" rx="10" fill="rgba(255,143,98,.1)" stroke="rgba(255,143,98,.28)"/>
+                <text x="94" y="288" font-size="15" fill="#ffbc98">Dans 0:48, passez au niveau 4 : la pente redescend à 1,5 %</text>
+              </g>
+              <!-- profil -->
+              <g>
+                <rect x="40" y="348" width="740" height="312" rx="18" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+                <text x="72" y="388" font-size="17" font-weight="500" fill="#fff">Boucle des crêts</text>
+                <text x="748" y="388" font-size="15" fill="rgba(255,255,255,.5)" text-anchor="end">11,3 km sur 24 km</text>
+                <line x1="72" y1="616" x2="748" y2="616" stroke="rgba(255,255,255,.1)"/>
+                <path clip-path="url(#rd-done)" d="M72,600 C110,596 150,585 190,565 S260,545 300,555 S350,515 390,495 S470,455 520,432 S575,442 620,495 S700,520 748,575 L748,616 L72,616 Z" fill="url(#rd-area)"/>
+                <path clip-path="url(#rd-done)" d="M72,600 C110,596 150,585 190,565 S260,545 300,555 S350,515 390,495 S470,455 520,432 S575,442 620,495 S700,520 748,575" fill="none" stroke="#ff8f62" stroke-width="3" stroke-linecap="round"/>
+                <path clip-path="url(#rd-todo)" d="M72,600 C110,596 150,585 190,565 S260,545 300,555 S350,515 390,495 S470,455 520,432 S575,442 620,495 S700,520 748,575" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 7"/>
+                <line x1="390" y1="420" x2="390" y2="616" stroke="rgba(255,255,255,.22)" stroke-dasharray="3 5"/>
+                <rect x="352" y="436" width="76" height="28" rx="8" fill="#fff"/>
+                <text x="390" y="455" font-size="13.5" font-weight="600" fill="#111" text-anchor="middle">+4,2 %</text>
+                <circle cx="390" cy="495" r="8" fill="#fff" stroke="#ff7a4c" stroke-width="4"/>
+                <g font-size="13" fill="rgba(255,255,255,.4)">
+                  <text x="72" y="642">0 km</text><text x="241" y="642" text-anchor="middle">6</text><text x="410" y="642" text-anchor="middle">12</text><text x="579" y="642" text-anchor="middle">18</text><text x="748" y="642" text-anchor="end">24 km</text>
+                </g>
+              </g>
+              <!-- tuiles -->
+              <g>
+                <rect x="808" y="92" width="168" height="120" rx="16" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+                <text x="828" y="128" font-size="14" fill="rgba(255,255,255,.55)">Cardio</text>
+                <polyline points="912,122 924,122 930,110 938,134 944,116 950,122 958,122" fill="none" stroke="#ff548a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                <text x="828" y="184" font-size="40" font-weight="600" letter-spacing="-1" fill="#fff">148</text>
+                <text x="906" y="184" font-size="15" fill="rgba(255,255,255,.55)">bpm</text>
+
+                <rect x="992" y="92" width="168" height="120" rx="16" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+                <text x="1012" y="128" font-size="14" fill="rgba(255,255,255,.55)">Cadence</text>
+                <text x="1012" y="184" font-size="40" font-weight="600" letter-spacing="-1" fill="#fff">87</text>
+                <text x="1066" y="184" font-size="15" fill="rgba(255,255,255,.55)">tr/min</text>
+
+                <rect x="808" y="228" width="168" height="120" rx="16" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+                <text x="828" y="264" font-size="14" fill="rgba(255,255,255,.55)">Vitesse</text>
+                <text x="828" y="320" font-size="40" font-weight="600" letter-spacing="-1" fill="#fff">31,4</text>
+                <text x="918" y="320" font-size="15" fill="rgba(255,255,255,.55)">km/h</text>
+
+                <rect x="992" y="228" width="168" height="120" rx="16" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+                <text x="1012" y="264" font-size="14" fill="rgba(255,255,255,.55)">Durée</text>
+                <text x="1012" y="320" font-size="40" font-weight="600" letter-spacing="-1" fill="#fff">42:18</text>
+              </g>
+              <!-- zones -->
+              <g>
+                <rect x="808" y="364" width="352" height="120" rx="16" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+                <text x="828" y="398" font-size="14" fill="rgba(255,255,255,.55)">Zone cardio</text>
+                <text x="1140" y="398" font-size="14" fill="#ffbc98" text-anchor="end">Zone 3, endurance</text>
+                <rect x="828" y="418" width="58" height="12" rx="6" fill="rgba(255,255,255,.12)"/>
+                <rect x="891" y="418" width="58" height="12" rx="6" fill="rgba(255,255,255,.12)"/>
+                <rect x="954" y="418" width="58" height="12" rx="6" fill="#ff8f62"/>
+                <rect x="1017" y="418" width="58" height="12" rx="6" fill="rgba(255,255,255,.12)"/>
+                <rect x="1080" y="418" width="58" height="12" rx="6" fill="rgba(255,255,255,.12)"/>
+                <g font-size="12" fill="rgba(255,255,255,.4)" text-anchor="middle">
+                  <text x="857" y="456">Z1</text><text x="920" y="456">Z2</text><text x="983" y="456" fill="#ffbc98">Z3</text><text x="1046" y="456">Z4</text><text x="1109" y="456">Z5</text>
+                </g>
+              </g>
+              <!-- historique -->
+              <g>
+                <rect x="808" y="500" width="352" height="160" rx="16" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)"/>
+                <text x="828" y="534" font-size="15" font-weight="500" fill="#fff">Historique</text>
+                <circle cx="1056" cy="529" r="7" fill="none" stroke="#3fcf7f" stroke-width="1.6"/>
+                <path d="M1052.5 529.2l2.4 2.4 4.4-4.6" fill="none" stroke="#3fcf7f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <text x="1140" y="534" font-size="13" fill="#6fd39a" text-anchor="end">Synchronisé</text>
+                <text x="828" y="574" font-size="14.5" fill="rgba(255,255,255,.9)">Montée du Pilat</text>
+                <text x="1140" y="574" font-size="13" fill="rgba(255,255,255,.45)" text-anchor="end">Hier, 18 km</text>
+                <line x1="828" y1="590" x2="1140" y2="590" stroke="rgba(255,255,255,.07)"/>
+                <text x="828" y="612" font-size="14.5" fill="rgba(255,255,255,.9)">Fractionné 6 × 3 min</text>
+                <text x="1140" y="612" font-size="13" fill="rgba(255,255,255,.45)" text-anchor="end">Lun., 45 min</text>
+                <line x1="828" y1="628" x2="1140" y2="628" stroke="rgba(255,255,255,.07)"/>
+                <text x="828" y="648" font-size="14.5" fill="rgba(255,255,255,.9)">Sortie récupération</text>
+                <text x="1140" y="648" font-size="13" fill="rgba(255,255,255,.45)" text-anchor="end">Sam., 60 min</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption>Écran de séance&#8239;: niveau de résistance à régler selon la pente, cardio et capteur en direct, historique synchronisé.</figcaption>
+        </figure>
+
+        <div class="case-cols">
+          <div class="case-col case-col--wide">
+            <h4>Le problème</h4>
+            <p>Mon home trainer, un In’Ride 100, n’est pas connecté&#8239;: la résistance se règle à la main, et rien ne guide la séance ni ne garde l’historique des sorties.</p>
+            <h4>Pourquoi ce projet</h4>
+            <p>Partir d’un besoin réel, le mien, et livrer un produit complet&#8239;: intégration matérielle, comptes, données synchronisées et site vitrine. Sans budget matériel&#8239;: toute la valeur vient du logiciel.</p>
+          </div>
+          <div class="case-col">
+            <h4>Ce que fait RideDeck</h4>
+            <ul class="bullets">
+              <li>Indique le niveau de résistance à régler selon la pente du parcours.</li>
+              <li>Affiche en direct la fréquence cardiaque et les données du capteur Bluetooth.</li>
+              <li>Synchronise l’historique des sorties sur tous les appareils, avec création de compte et connexion.</li>
+              <li>Fonctionne sur PC et sur iPad, via le navigateur Bluefy compatible Web Bluetooth.</li>
+            </ul>
+          </div>
+          <div class="case-col case-col--narrow">
+            <h4>Technos</h4>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Web Bluetooth API</li><li>Supabase Auth</li><li>Supabase Postgres</li><li>GitHub Pages</li><li>Bluefy (iPad)</li>
+            </ul>
+            <p class="col-note">Aucune installation&#8239;: une page web qui dialogue directement avec les capteurs.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Rivet -->
+      <article class="case" id="rivet" data-title="Rivet">
+        <div class="case-head">
+          <div>
+            <h3>Rivet</h3>
+            <p class="case-tag">Ma version d’un SaaS façon Monday.com, reconstruite de zéro pour la gestion des interventions de techniciens.</p>
+          </div>
+          <dl class="meta">
+            <div><dt>Rôle</dt><dd>Conception et développement</dd></div>
+            <div><dt>Pour</dt><dd>Équipes SAV terrain</dd></div>
+            <div><dt>Statut</dt><dd>En développement</dd></div>
+          </dl>
+        </div>
+
+        <figure class="visual">
+          <div class="visual-frame">
+            <svg viewBox="0 0 1200 680" role="img" aria-labelledby="rv-t" font-family="Inter, system-ui, sans-serif">
+              <title id="rv-t">Tableau des interventions dans Rivet : interventions de la semaine avec client, machine, technicien, statut et date, dans l’instance Atelier Nord</title>
+              <rect width="1200" height="680" fill="#060608"/>
+              <!-- sidebar -->
+              <rect width="232" height="680" fill="rgba(255,255,255,.025)"/>
+              <line x1="232" y1="0" x2="232" y2="680" stroke="rgba(255,255,255,.08)"/>
+              <circle cx="38" cy="43" r="11" fill="none" stroke="#ff8f62" stroke-width="3"/>
+              <circle cx="38" cy="43" r="3.5" fill="#ff8f62"/>
+              <text x="58" y="50" font-size="20" font-weight="600" fill="#fff">Rivet</text>
+              <rect x="18" y="78" width="196" height="54" rx="12" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)"/>
+              <rect x="30" y="91" width="28" height="28" rx="8" fill="#ff7a4c"/>
+              <text x="44" y="110" font-size="11.5" font-weight="600" fill="#1a0700" text-anchor="middle">AN</text>
+              <text x="68" y="102" font-size="14.5" font-weight="500" fill="#fff">Atelier Nord</text>
+              <text x="68" y="120" font-size="12" fill="rgba(255,255,255,.45)">Instance de travail</text>
+              <path d="M190 101l5 5 5-5" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="14" y="152" width="204" height="38" rx="9" fill="rgba(255,255,255,.07)"/>
+              <g fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.6">
+                <rect x="30" y="164" width="14" height="14" rx="3"/>
+                <rect x="30" y="208" width="14" height="14" rx="3"/><path d="M30 213h14"/>
+                <circle cx="37" cy="256" r="4"/><path d="M30 266c1-4 4-5 7-5s6 1 7 5"/>
+                <path d="M31 296h12v12H31z M34 296v-3h6v3"/>
+                <circle cx="37" cy="346" r="6.5"/>
+              </g>
+              <text x="56" y="176" font-size="14.5" font-weight="500" fill="#fff">Interventions</text>
+              <text x="56" y="220" font-size="14.5" fill="rgba(255,255,255,.65)">Planning</text>
+              <text x="56" y="264" font-size="14.5" fill="rgba(255,255,255,.65)">Techniciens</text>
+              <text x="56" y="308" font-size="14.5" fill="rgba(255,255,255,.65)">Machines</text>
+              <text x="56" y="352" font-size="14.5" fill="rgba(255,255,255,.65)">Clients</text>
+              <text x="30" y="418" font-size="12" fill="rgba(255,255,255,.4)">Membres de l’instance</text>
+              <g font-size="10.5" font-weight="600" fill="#fff" text-anchor="middle">
+                <circle cx="42" cy="446" r="14" fill="#4b7bd8" stroke="#0b0b0e" stroke-width="2.5"/><text x="42" y="450">MR</text>
+                <circle cx="66" cy="446" r="14" fill="#c2477a" stroke="#0b0b0e" stroke-width="2.5"/><text x="66" y="450">SL</text>
+                <circle cx="90" cy="446" r="14" fill="#2f9e64" stroke="#0b0b0e" stroke-width="2.5"/><text x="90" y="450">KD</text>
+                <circle cx="114" cy="446" r="14" fill="#2a2a31" stroke="#0b0b0e" stroke-width="2.5"/><text x="114" y="450" fill="rgba(255,255,255,.7)">+4</text>
+              </g>
+              <rect x="18" y="610" width="196" height="46" rx="10" fill="none" stroke="rgba(255,255,255,.2)" stroke-dasharray="4 4"/>
+              <path d="M38 633h12 M44 627v12" stroke="#ffbc98" stroke-width="1.8" stroke-linecap="round"/>
+              <text x="60" y="638" font-size="14" fill="rgba(255,255,255,.85)">Inviter un membre</text>
+              <!-- en-tête -->
+              <text x="264" y="62" font-size="28" font-weight="600" letter-spacing="-.6" fill="#fff">Interventions</text>
+              <text x="264" y="88" font-size="14" fill="rgba(255,255,255,.45)">Semaine 46</text>
+              <rect x="828" y="38" width="160" height="40" rx="10" fill="none" stroke="rgba(255,255,255,.14)"/>
+              <text x="908" y="63" font-size="13.5" fill="rgba(255,255,255,.8)" text-anchor="middle">Tous les techniciens</text>
+              <rect x="1000" y="38" width="168" height="40" rx="10" fill="#fff"/>
+              <text x="1084" y="63" font-size="14" font-weight="500" fill="#111" text-anchor="middle">Nouvelle intervention</text>
+              <text x="264" y="126" font-size="14" font-weight="500" fill="#fff">Tableau</text>
+              <text x="344" y="126" font-size="14" fill="rgba(255,255,255,.5)">Planning</text>
+              <text x="432" y="126" font-size="14" fill="rgba(255,255,255,.5)">Carte</text>
+              <line x1="264" y1="140" x2="1168" y2="140" stroke="rgba(255,255,255,.08)"/>
+              <rect x="264" y="138" width="54" height="2.5" rx="1" fill="#ff8f62"/>
+              <!-- groupe 1 -->
+              <rect x="264" y="161" width="4" height="18" rx="2" fill="#ff8f62"/>
+              <text x="278" y="176" font-size="16" font-weight="600" fill="#ff8f62">Cette semaine</text>
+              <text x="400" y="176" font-size="13" fill="rgba(255,255,255,.4)">5 interventions</text>
+              <g font-size="12.5" fill="rgba(255,255,255,.4)">
+                <text x="282" y="207">Intervention</text><text x="476" y="207">Client</text><text x="648" y="207">Machine</text><text x="806" y="207">Technicien</text><text x="946" y="207">Statut</text><text x="1092" y="207">Date</text>
+              </g>
+              <g>
+                <!-- ligne 1 -->
+                <rect x="264" y="218" width="904" height="44" rx="8" fill="rgba(255,255,255,.035)"/><rect x="264" y="218" width="3" height="44" fill="#ff8f62"/>
+                <text x="282" y="245" font-size="14.5" fill="rgba(255,255,255,.92)">Fuite hydraulique</text><text x="476" y="245" font-size="14" fill="rgba(255,255,255,.7)">Forges du Rhône</text><text x="648" y="245" font-size="14" fill="rgba(255,255,255,.7)">Presse 250 t</text>
+                <circle cx="818" cy="240" r="12" fill="#4b7bd8"/><text x="818" y="244" font-size="10" font-weight="600" fill="#fff" text-anchor="middle">MR</text><text x="838" y="245" font-size="14" fill="rgba(255,255,255,.8)">Marc</text>
+                <rect x="942" y="226" width="128" height="28" rx="7" fill="#d9703e"/><text x="1006" y="245" font-size="13" font-weight="500" fill="#fff" text-anchor="middle">En cours</text>
+                <text x="1092" y="245" font-size="14" fill="rgba(255,255,255,.7)">12 nov.</text>
+                <!-- ligne 2 -->
+                <rect x="264" y="266" width="904" height="44" rx="8" fill="rgba(255,255,255,.035)"/><rect x="264" y="266" width="3" height="44" fill="#ff8f62"/>
+                <text x="282" y="293" font-size="14.5" fill="rgba(255,255,255,.92)">Réglage butée arrière</text><text x="476" y="293" font-size="14" fill="rgba(255,255,255,.7)">Tôlerie Bresson</text><text x="648" y="293" font-size="14" fill="rgba(255,255,255,.7)">Presse plieuse</text>
+                <circle cx="818" cy="288" r="12" fill="#c2477a"/><text x="818" y="292" font-size="10" font-weight="600" fill="#fff" text-anchor="middle">SL</text><text x="838" y="293" font-size="14" fill="rgba(255,255,255,.8)">Sarah</text>
+                <rect x="942" y="274" width="128" height="28" rx="7" fill="#4b72c9"/><text x="1006" y="293" font-size="13" font-weight="500" fill="#fff" text-anchor="middle">Planifiée</text>
+                <text x="1092" y="293" font-size="14" fill="rgba(255,255,255,.7)">13 nov.</text>
+                <!-- ligne 3 -->
+                <rect x="264" y="314" width="904" height="44" rx="8" fill="rgba(255,255,255,.035)"/><rect x="264" y="314" width="3" height="44" fill="#ff8f62"/>
+                <text x="282" y="341" font-size="14.5" fill="rgba(255,255,255,.92)">Remplacement lames</text><text x="476" y="341" font-size="14" fill="rgba(255,255,255,.7)">Métallerie Vidal</text><text x="648" y="341" font-size="14" fill="rgba(255,255,255,.7)">Cisaille 3 m</text>
+                <circle cx="818" cy="336" r="12" fill="#2f9e64"/><text x="818" y="340" font-size="10" font-weight="600" fill="#fff" text-anchor="middle">KD</text><text x="838" y="341" font-size="14" fill="rgba(255,255,255,.8)">Karim</text>
+                <rect x="942" y="322" width="128" height="28" rx="7" fill="#2f9460"/><text x="1006" y="341" font-size="13" font-weight="500" fill="#fff" text-anchor="middle">Terminée</text>
+                <text x="1092" y="341" font-size="14" fill="rgba(255,255,255,.7)">10 nov.</text>
+                <!-- ligne 4 -->
+                <rect x="264" y="362" width="904" height="44" rx="8" fill="rgba(255,255,255,.035)"/><rect x="264" y="362" width="3" height="44" fill="#ff8f62"/>
+                <text x="282" y="389" font-size="14.5" fill="rgba(255,255,255,.92)">Visite préventive</text><text x="476" y="389" font-size="14" fill="rgba(255,255,255,.7)">Atelier Ferrand</text><text x="648" y="389" font-size="14" fill="rgba(255,255,255,.7)">Presse 400 t</text>
+                <circle cx="818" cy="384" r="12" fill="#4b7bd8"/><text x="818" y="388" font-size="10" font-weight="600" fill="#fff" text-anchor="middle">MR</text><text x="838" y="389" font-size="14" fill="rgba(255,255,255,.8)">Marc</text>
+                <rect x="942" y="370" width="128" height="28" rx="7" fill="#7f62c9"/><text x="1006" y="389" font-size="13" font-weight="500" fill="#fff" text-anchor="middle">Attente pièce</text>
+                <text x="1092" y="389" font-size="14" fill="rgba(255,255,255,.7)">14 nov.</text>
+                <!-- ligne 5 -->
+                <rect x="264" y="410" width="904" height="44" rx="8" fill="rgba(255,255,255,.035)"/><rect x="264" y="410" width="3" height="44" fill="#ff8f62"/>
+                <text x="282" y="437" font-size="14.5" fill="rgba(255,255,255,.92)">Défaut capteur sécurité</text><text x="476" y="437" font-size="14" fill="rgba(255,255,255,.7)">Chaudronnerie Alpes</text><text x="648" y="437" font-size="14" fill="rgba(255,255,255,.7)">Cisaille 4 m</text>
+                <circle cx="818" cy="432" r="12" fill="#c2477a"/><text x="818" y="436" font-size="10" font-weight="600" fill="#fff" text-anchor="middle">SL</text><text x="838" y="437" font-size="14" fill="rgba(255,255,255,.8)">Sarah</text>
+                <rect x="942" y="418" width="128" height="28" rx="7" fill="#cf3a52"/><text x="1006" y="437" font-size="13" font-weight="500" fill="#fff" text-anchor="middle">Urgent</text>
+                <text x="1092" y="437" font-size="14" fill="rgba(255,255,255,.7)">12 nov.</text>
+              </g>
+              <!-- groupe 2 -->
+              <rect x="264" y="483" width="4" height="18" rx="2" fill="#ff6f9a"/>
+              <text x="278" y="498" font-size="16" font-weight="600" fill="#ff6f9a">À planifier</text>
+              <text x="378" y="498" font-size="13" fill="rgba(255,255,255,.4)">2 interventions</text>
+              <g>
+                <rect x="264" y="512" width="904" height="44" rx="8" fill="rgba(255,255,255,.035)"/><rect x="264" y="512" width="3" height="44" fill="#ff6f9a"/>
+                <text x="282" y="539" font-size="14.5" fill="rgba(255,255,255,.92)">Mise en service</text><text x="476" y="539" font-size="14" fill="rgba(255,255,255,.7)">Découpe Martin</text><text x="648" y="539" font-size="14" fill="rgba(255,255,255,.7)">Presse plieuse</text>
+                <circle cx="818" cy="534" r="12" fill="none" stroke="rgba(255,255,255,.3)" stroke-dasharray="3 3"/><text x="838" y="539" font-size="14" fill="rgba(255,255,255,.4)">À assigner</text>
+                <rect x="942" y="520" width="128" height="28" rx="7" fill="rgba(255,255,255,.1)"/><text x="1006" y="539" font-size="13" font-weight="500" fill="rgba(255,255,255,.75)" text-anchor="middle">À planifier</text>
+                <text x="1092" y="539" font-size="14" fill="rgba(255,255,255,.35)">–</text>
+
+                <rect x="264" y="560" width="904" height="44" rx="8" fill="rgba(255,255,255,.035)"/><rect x="264" y="560" width="3" height="44" fill="#ff6f9a"/>
+                <text x="282" y="587" font-size="14.5" fill="rgba(255,255,255,.92)">Formation opérateurs</text><text x="476" y="587" font-size="14" fill="rgba(255,255,255,.7)">Forges du Rhône</text><text x="648" y="587" font-size="14" fill="rgba(255,255,255,.7)">Cisaille 3 m</text>
+                <circle cx="818" cy="582" r="12" fill="none" stroke="rgba(255,255,255,.3)" stroke-dasharray="3 3"/><text x="838" y="587" font-size="14" fill="rgba(255,255,255,.4)">À assigner</text>
+                <rect x="942" y="568" width="128" height="28" rx="7" fill="rgba(255,255,255,.1)"/><text x="1006" y="587" font-size="13" font-weight="500" fill="rgba(255,255,255,.75)" text-anchor="middle">À planifier</text>
+                <text x="1092" y="587" font-size="14" fill="rgba(255,255,255,.35)">–</text>
+              </g>
+              <!-- notification -->
+              <rect x="884" y="620" width="284" height="44" rx="12" fill="#16161b" stroke="rgba(255,255,255,.12)"/>
+              <circle cx="906" cy="642" r="5" fill="#3fcf7f"/>
+              <text x="920" y="647" font-size="13.5" fill="rgba(255,255,255,.88)">Sarah L. a rejoint Atelier Nord</text>
+            </svg>
+          </div>
+          <figcaption>Tableau des interventions&#8239;: statut, technicien, machine et client, dans une instance d’entreprise dédiée.</figcaption>
+        </figure>
+
+        <div class="case-cols">
+          <div class="case-col case-col--wide">
+            <h4>Le point de départ</h4>
+            <p>Chez Lefort, j’ai intégré Monday.com et n8n pour suivre les interventions SAV. Monday est un outil généraliste&#8239;: il faut le configurer pour qu’il parle le langage du SAV. Rivet prend le chemin inverse et part du métier de l’intervention.</p>
+            <h4>Pourquoi ce projet</h4>
+            <p>Reconstruire le SaaS que j’utilise au quotidien m’oblige à comprendre ses choix de conception&#8239;: modèle de données, permissions, multi-entreprise. C’est la différence entre configurer un outil et le concevoir.</p>
+          </div>
+          <div class="case-col">
+            <h4>Ce que fait Rivet</h4>
+            <ul class="bullets">
+              <li>Tableau d’interventions&#8239;: client, machine, technicien, statut et date.</li>
+              <li>Un seul compte pour plusieurs entreprises, avec choix de l’instance de travail.</li>
+              <li>Accès à une instance sur invitation uniquement.</li>
+              <li>Interface sobre, lisible par des techniciens en déplacement.</li>
+            </ul>
+          </div>
+          <div class="case-col case-col--narrow">
+            <h4>Technos</h4>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Supabase Auth</li><li>Supabase Postgres</li><li>GitHub Pages</li>
+            </ul>
+            <p class="col-note">Les données de chaque entreprise restent cloisonnées dans son instance.</p>
+          </div>
+        </div>
+
+        <div class="compare">
+          <div class="compare-head">
+            <h4>Le parallèle avec Lefort</h4>
+            <a class="text-link" href="#lefort">Voir l’expérience Lefort</a>
+          </div>
+          <table>
+            <thead>
+              <tr><th scope="col"><span class="sr-only">Critère</span></th><th scope="col">Chez Lefort, avec Monday.com</th><th scope="col">Dans Rivet</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Point de départ</th><td data-label="Chez Lefort">Un outil généraliste, configuré pour le SAV</td><td data-label="Dans Rivet">Un modèle de données construit autour de l’intervention</td></tr>
+              <tr><th scope="row">Suivi des interventions</th><td data-label="Chez Lefort">Tableaux Monday.com automatisés avec n8n</td><td data-label="Dans Rivet">Statuts, techniciens et machines natifs</td></tr>
+              <tr><th scope="row">Organisation</th><td data-label="Chez Lefort">3 sites, une cinquantaine de collaborateurs</td><td data-label="Dans Rivet">Plusieurs entreprises par compte, accès sur invitation</td></tr>
+              <tr><th scope="row">Mon rôle</th><td data-label="Chez Lefort">Intégrer, configurer, automatiser</td><td data-label="Dans Rivet">Concevoir et coder le produit</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Expériences -->
+  <section class="section" id="experiences" data-search-scope aria-labelledby="exp-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="exp-title">Expériences</h2>
+        <p>La même méthode partout&#8239;: comprendre le terrain, cadrer, construire, faire adopter.</p>
+      </div>
+
+      <!-- Lefort -->
+      <article class="case" id="lefort" data-title="Lefort">
+        <div class="case-head">
+          <div>
+            <h3>Lefort</h3>
+            <p class="case-tag">Outiller le SAV de presses et cisailles sur trois sites, avec Monday.com et n8n.</p>
+          </div>
+          <dl class="meta">
+            <div><dt>Rôle</dt><dd>Product builder</dd></div>
+            <div><dt>Période</dt><dd>Févr. 2025 – nov. 2026</dd></div>
+            <div><dt>Secteur</dt><dd>Industrie, SAV</dd></div>
+          </dl>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><p class="stat-num">+8&nbsp;%</p><p class="stat-label">de chiffre d’affaires sur le périmètre SAV</p></div>
+          <div class="stat"><p class="stat-num">−15&nbsp;%</p><p class="stat-label">de temps de traitement hebdomadaire pour les responsables SAV</p></div>
+          <div class="stat"><p class="stat-num">≈&#8239;50</p><p class="stat-label">utilisateurs internes interrogés, puis embarqués</p></div>
+          <div class="stat"><p class="stat-num">3</p><p class="stat-label">sites alignés sur une même roadmap d’automatisation</p></div>
+        </div>
+
+        <figure class="visual">
+          <div class="visual-frame">
+            <svg viewBox="0 0 1200 560" role="img" aria-labelledby="n8-t" font-family="Inter, system-ui, sans-serif">
+              <title id="n8-t">Workflow n8n : une nouvelle demande SAV lit la fiche machine, vérifie le contrat, crée l’intervention dans Monday.com et prévient le technicien par email, ou prépare un devis pour le client</title>
+              <defs>
+                <pattern id="n8-dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1.1" fill="rgba(255,255,255,.1)"/></pattern>
+              </defs>
+              <rect width="1200" height="560" fill="#09090c"/>
+              <rect y="52" width="1200" height="508" fill="url(#n8-dots)"/>
+              <!-- barre -->
+              <rect width="1200" height="52" fill="#0e0e12"/>
+              <line x1="0" y1="52" x2="1200" y2="52" stroke="rgba(255,255,255,.08)"/>
+              <text x="24" y="32" font-size="14" fill="rgba(255,255,255,.45)">Workflows /</text>
+              <text x="112" y="32" font-size="14.5" font-weight="500" fill="#fff">Suivi SAV, nouvelle demande</text>
+              <text x="556" y="32" font-size="14" font-weight="500" fill="#fff" text-anchor="middle">Éditeur</text>
+              <rect x="528" y="49" width="56" height="3" rx="1.5" fill="#ff7a4c"/>
+              <text x="652" y="32" font-size="14" fill="rgba(255,255,255,.45)" text-anchor="middle">Exécutions</text>
+              <text x="1120" y="32" font-size="13.5" fill="rgba(255,255,255,.75)" text-anchor="end">Actif</text>
+              <rect x="1132" y="16" width="44" height="22" rx="11" fill="#2f9460"/>
+              <circle cx="1165" cy="27" r="8" fill="#fff"/>
+
+              <!-- connexions -->
+              <g fill="none" stroke-width="2.2">
+                <path d="M176 280 C233 280 233 280 290 280" stroke="rgba(255,255,255,.45)"/>
+                <path d="M386 280 C443 280 443 280 500 280" stroke="rgba(255,255,255,.45)"/>
+                <path d="M596 262 C668 262 668 168 740 168" stroke="rgba(255,255,255,.45)"/>
+                <path d="M836 168 C898 168 898 168 960 168" stroke="rgba(255,255,255,.45)"/>
+                <path d="M596 298 C668 298 668 392 740 392" stroke="rgba(255,255,255,.2)"/>
+                <path d="M836 392 C898 392 898 392 960 392" stroke="rgba(255,255,255,.2)"/>
+              </g>
+              <g font-size="11.5" fill="rgba(255,255,255,.5)" text-anchor="middle">
+                <text x="233" y="270">1 item</text><text x="443" y="270">1 item</text><text x="898" y="158">1 item</text>
+              </g>
+              <text x="608" y="250" font-size="12" fill="rgba(255,255,255,.55)">vrai</text>
+              <text x="608" y="320" font-size="12" fill="rgba(255,255,255,.35)">faux</text>
+
+              <!-- nœuds -->
+              <g>
+                <!-- déclencheur -->
+                <path d="M128 232 H160 Q176 232 176 248 V312 Q176 328 160 328 H128 A48 48 0 0 1 128 232 Z" fill="#1d1d23" stroke="#3fa36d" stroke-width="2"/>
+                <path d="M134 256 L116 284 H129 L122 304 L142 274 H129 Z" fill="#ff8f62"/>
+                <circle cx="168" cy="320" r="9" fill="#2f9460"/><path d="M164 320.3l2.6 2.6 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="176" cy="280" r="6" fill="#8d8d99"/>
+                <text x="128" y="354" font-size="14" font-weight="500" fill="#fff" text-anchor="middle">Nouvelle demande</text>
+                <text x="128" y="373" font-size="12" fill="rgba(255,255,255,.45)" text-anchor="middle">Webhook</text>
+
+                <!-- fiche machine -->
+                <rect x="290" y="232" width="96" height="96" rx="16" fill="#1d1d23" stroke="#3fa36d" stroke-width="2"/>
+                <g fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2.2"><ellipse cx="338" cy="266" rx="16" ry="6"/><path d="M322 266v28c0 3.3 7.2 6 16 6s16-2.7 16-6v-28"/><path d="M322 280c0 3.3 7.2 6 16 6s16-2.7 16-6"/></g>
+                <circle cx="378" cy="320" r="9" fill="#2f9460"/><path d="M374 320.3l2.6 2.6 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="286" y="272" width="8" height="16" rx="2" fill="#8d8d99"/><circle cx="386" cy="280" r="6" fill="#8d8d99"/>
+                <text x="338" y="354" font-size="14" font-weight="500" fill="#fff" text-anchor="middle">Fiche machine</text>
+                <text x="338" y="373" font-size="12" fill="rgba(255,255,255,.45)" text-anchor="middle">Airtable : rechercher</text>
+
+                <!-- condition -->
+                <rect x="500" y="232" width="96" height="96" rx="16" fill="#1d1d23" stroke="#3fa36d" stroke-width="2"/>
+                <g fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M530 280h14l18-14 M544 280l18 14"/><path d="M555 264l7 2-2 7 M560 287l2 7-7 2"/></g>
+                <circle cx="588" cy="320" r="9" fill="#2f9460"/><path d="M584 320.3l2.6 2.6 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="496" y="272" width="8" height="16" rx="2" fill="#8d8d99"/><circle cx="596" cy="262" r="6" fill="#8d8d99"/><circle cx="596" cy="298" r="6" fill="#8d8d99"/>
+                <text x="548" y="354" font-size="14" font-weight="500" fill="#fff" text-anchor="middle">Sous contrat ?</text>
+                <text x="548" y="373" font-size="12" fill="rgba(255,255,255,.45)" text-anchor="middle">Condition</text>
+
+                <!-- créer intervention -->
+                <rect x="740" y="120" width="96" height="96" rx="16" fill="#1d1d23" stroke="#3fa36d" stroke-width="2"/>
+                <g fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2.2"><rect x="770" y="152" width="36" height="32" rx="4"/><path d="M770 162h36 M782 162v22 M794 162v22"/></g>
+                <circle cx="828" cy="208" r="9" fill="#2f9460"/><path d="M824 208.3l2.6 2.6 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="736" y="160" width="8" height="16" rx="2" fill="#8d8d99"/><circle cx="836" cy="168" r="6" fill="#8d8d99"/>
+                <text x="788" y="242" font-size="14" font-weight="500" fill="#fff" text-anchor="middle">Créer l’intervention</text>
+                <text x="788" y="261" font-size="12" fill="rgba(255,255,255,.45)" text-anchor="middle">Monday.com</text>
+
+                <!-- prévenir technicien -->
+                <rect x="960" y="120" width="96" height="96" rx="16" fill="#1d1d23" stroke="#3fa36d" stroke-width="2"/>
+                <g fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2.2" stroke-linejoin="round"><rect x="990" y="154" width="36" height="28" rx="4"/><path d="M991 157l17 13 17-13"/></g>
+                <circle cx="1048" cy="208" r="9" fill="#2f9460"/><path d="M1044 208.3l2.6 2.6 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="956" y="160" width="8" height="16" rx="2" fill="#8d8d99"/>
+                <text x="1008" y="242" font-size="14" font-weight="500" fill="#fff" text-anchor="middle">Prévenir le technicien</text>
+                <text x="1008" y="261" font-size="12" fill="rgba(255,255,255,.45)" text-anchor="middle">Email</text>
+
+                <!-- devis -->
+                <rect x="740" y="344" width="96" height="96" rx="16" fill="#1a1a1f" stroke="#33333d" stroke-width="1.5"/>
+                <g fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M776 380l-10 12 10 12 M800 380l10 12-10 12 M793 377l-10 30"/></g>
+                <rect x="736" y="384" width="8" height="16" rx="2" fill="#6d6d78"/><circle cx="836" cy="392" r="6" fill="#6d6d78"/>
+                <text x="788" y="466" font-size="14" font-weight="500" fill="rgba(255,255,255,.7)" text-anchor="middle">Préparer le devis</text>
+                <text x="788" y="485" font-size="12" fill="rgba(255,255,255,.35)" text-anchor="middle">Code</text>
+
+                <!-- envoyer client -->
+                <rect x="960" y="344" width="96" height="96" rx="16" fill="#1a1a1f" stroke="#33333d" stroke-width="1.5"/>
+                <g fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2.2" stroke-linejoin="round"><rect x="990" y="378" width="36" height="28" rx="4"/><path d="M991 381l17 13 17-13"/></g>
+                <rect x="956" y="384" width="8" height="16" rx="2" fill="#6d6d78"/>
+                <text x="1008" y="466" font-size="14" font-weight="500" fill="rgba(255,255,255,.7)" text-anchor="middle">Envoyer au client</text>
+                <text x="1008" y="485" font-size="12" fill="rgba(255,255,255,.35)" text-anchor="middle">Email</text>
+              </g>
+
+              <!-- note -->
+              <rect x="64" y="414" width="372" height="104" rx="8" fill="rgba(255,206,120,.07)" stroke="rgba(255,206,120,.28)"/>
+              <text x="84" y="444" font-size="13" font-weight="600" fill="rgba(255,226,180,.95)">Objectif</text>
+              <text x="84" y="470" font-size="14" fill="rgba(255,226,180,.82)">Créer l’intervention et prévenir le technicien</text>
+              <text x="84" y="492" font-size="14" fill="rgba(255,226,180,.82)">sans ressaisie entre les outils.</text>
+
+              <!-- bouton -->
+              <rect x="512" y="486" width="178" height="40" rx="10" fill="#ff7a4c"/>
+              <path d="M532 498l11 8-11 8z" fill="#fff"/>
+              <text x="553" y="511" font-size="14" font-weight="500" fill="#fff">Tester le workflow</text>
+            </svg>
+          </div>
+          <figcaption>Workflow n8n simplifié, représentatif des automatisations déployées&#8239;: la demande SAV crée l’intervention et prévient le technicien.</figcaption>
+        </figure>
+
+        <div class="case-cols case-cols--steps">
+          <div class="case-col">
+            <h4>Écouter</h4>
+            <p>Entretiens qualitatifs avec près de 50 utilisateurs internes, répartis sur 3 sites, pour identifier les inefficacités opérationnelles et aligner les priorités business.</p>
+          </div>
+          <div class="case-col">
+            <h4>Cadrer</h4>
+            <p>Roadmap d’automatisation cross-sites, priorisée par la valeur, pour renforcer la cohésion entre équipes et l’interopérabilité des outils.</p>
+          </div>
+          <div class="case-col">
+            <h4>Bâtir</h4>
+            <p>Écosystème automatisé&#8239;: intégration d’API tierces et orchestration de workflows avec n8n, Monday.com et Airtable, pour supprimer les tâches chronophages.</p>
+          </div>
+          <div class="case-col">
+            <h4>Faire adopter</h4>
+            <p>Documentation technique et fonctionnelle (knowledge base) et programmes d’onboarding pour maximiser l’adoption auprès des 50 collaborateurs.</p>
+          </div>
+        </div>
+        <ul class="tags tags--row" aria-label="Outils utilisés chez Lefort">
+          <li>n8n</li><li>Monday.com</li><li>Airtable</li><li>API tierces</li><li>Knowledge base</li><li>Onboarding</li>
+        </ul>
+      </article>
+
+      <!-- Callio -->
+      <article class="case" id="callio" data-title="Callio">
+        <div class="case-head">
+          <div>
+            <h3>Callio</h3>
+            <p class="case-tag">Une application pour les enfants sur le spectre autistique, conçue avec les professionnels et les familles qui les accompagnent.</p>
+          </div>
+          <dl class="meta">
+            <div><dt>Rôle</dt><dd>Co-fondateur et CPO</dd></div>
+            <div><dt>Période</dt><dd>2023 – 2025</dd></div>
+          </dl>
+        </div>
+
+        <div class="stats stats--3">
+          <div class="stat"><p class="stat-num">90+</p><p class="stat-label">professionnels interrogés&#8239;: neuropsychologues, orthophonistes, orthopédagogues</p></div>
+          <div class="stat"><p class="stat-num">40</p><p class="stat-label">parents interrogés pour cartographier les parcours</p></div>
+          <div class="stat"><p class="stat-num">35</p><p class="stat-label">enfants en sessions d’usabilité, en conditions réelles</p></div>
+        </div>
+
+        <div class="split">
+          <figure class="visual">
+            <div class="visual-frame">
+              <img src="callio-jeu-ecriture.png" width="1440" height="960" loading="lazy" decoding="async" alt="Écran du jeu d’écriture de Callio : un pictogramme, le mot BONJOUR à reconstituer et des tuiles de lettres à placer">
+            </div>
+            <figcaption>Le jeu d’écriture&#8239;: associer le pictogramme au mot, puis le reconstituer lettre par lettre, avec lecture audio.</figcaption>
+          </figure>
+          <div class="stack">
+            <div class="case-col">
+              <h4>Écouter</h4>
+              <p>Entretiens approfondis pour cartographier les parcours, identifier les points de friction majeurs et définir le problem space.</p>
+            </div>
+            <div class="case-col">
+              <h4>Cadrer</h4>
+              <p>Product roadmap, spécifications fonctionnelles (PRD) et maquettes UI/UX sur Figma pour aligner la vision produit avec les développeurs.</p>
+            </div>
+            <div class="case-col">
+              <h4>Tester</h4>
+              <p>Sessions d’usabilité avec 35 enfants, tests A/B et analyse du comportement par click tracking pour valider l’ergonomie et l’engagement.</p>
+            </div>
+            <div class="case-col">
+              <h4>Itérer</h4>
+              <p>Développement piloté en Agile (sprints, backlog grooming), avec des itérations continues nourries par le feedback et les données d’usage.</p>
+            </div>
+            <ul class="tags" aria-label="Outils et méthodes chez Callio">
+              <li>Figma</li><li>PRD</li><li>Roadmap</li><li>Tests A/B</li><li>Click tracking</li><li>Agile</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <ol class="earlier" aria-label="Parcours antérieur">
+        <li class="earlier-item" data-title="Impala">
+          <p class="earlier-date">2022 – 2023</p>
+          <div>
+            <h3>Impala <span class="earlier-role">Bras droit du CEO</span></h3>
+            <p>Plateforme numérique d’aide à l’orientation. Comptabilité (ADV, rapprochements bancaires, URSSAF), RH (recrutement, RTT, contrats, paie), finances (trésorerie, prévisionnel, aide à la décision), administration (AG, appels à projets, audits) et vie d’équipe.</p>
+          </div>
+        </li>
+        <li class="earlier-item" data-title="Formation">
+          <p class="earlier-date">2020 – 2023</p>
+          <div>
+            <h3>ESAM <span class="earlier-role">Bachelor Management et gestion de projet international</span></h3>
+            <p>Précédé d’un Bac ES obtenu en 2020.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section class="section" id="competences" data-search-scope data-title="Compétences" aria-labelledby="skills-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="skills-title">Compétences</h2>
+        <p>Outils auto-évalués sur 6, méthodes et technos utilisées en conditions réelles.</p>
+      </div>
+      <div class="skills">
+        <div class="skills-col">
+          <h3>Outils</h3>
+          <ul class="levels">
+            <li><span>Notion</span><span class="lvl" role="img" aria-label="Niveau 6 sur 6"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
+            <li><span>IA générative et agentique</span><span class="lvl" role="img" aria-label="Niveau 6 sur 6"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
+            <li><span>Figma</span><span class="lvl" role="img" aria-label="Niveau 5 sur 6"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+            <li><span>n8n et Zapier</span><span class="lvl" role="img" aria-label="Niveau 5 sur 6"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+            <li><span>Anglais</span><span class="lvl" role="img" aria-label="Niveau 4 sur 6"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+            <li><span>HTML, CSS, JS et SQL</span><span class="lvl" role="img" aria-label="Niveau 3 sur 6"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></li>
+          </ul>
+        </div>
+        <div class="skills-col">
+          <h3>Méthodes produit</h3>
+          <ul class="tags">
+            <li>Entretiens utilisateurs</li><li>Cartographie des parcours</li><li>Problem space</li><li>Roadmap</li><li>Priorisation par la valeur</li><li>PRD</li><li>Maquettes UI/UX</li><li>Tests d’usabilité</li><li>Tests A/B</li><li>Click tracking</li><li>Agile</li><li>Backlog grooming</li><li>Onboarding</li><li>Knowledge base</li>
+          </ul>
+        </div>
+        <div class="skills-col">
+          <h3>Intégrations et stack</h3>
+          <ul class="tags">
+            <li>Monday.com</li><li>Airtable</li><li>Supabase</li><li>API tierces</li><li>Web Bluetooth</li><li>GitHub Pages</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>SQL</li>
+          </ul>
+          <h3 class="skills-sub">Gestion d’entreprise</h3>
+          <ul class="tags">
+            <li>Comptabilité</li><li>RH et paie</li><li>Trésorerie</li><li>Prévisionnel</li><li>Administration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citation -->
+  <section class="quote-section" id="citation" data-search-scope data-title="Citation" aria-labelledby="quote-title">
+    <div class="wrap">
+      <h2 class="sr-only" id="quote-title">En dehors du travail</h2>
+      <figure class="quote">
+        <blockquote>
+          <p>«&#8239;Bénévole dans un repair café, ancien détenteur d’un record de France en haltérophilie, amateur de guimbardes et d’horlogerie, j’aime m’essayer à tout sans modération&#8239;!&#8239;»</p>
+        </blockquote>
+        <figcaption>Luc Alfonsi, en dehors du travail</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section class="cta" id="cv" aria-labelledby="cv-title">
+    <div class="wrap">
+      <h2 id="cv-title">Tout mon parcours sur une page</h2>
+      <p class="cta-lede">Le CV au format PDF, prêt à être partagé.</p>
+      <a class="cv-btn" href="CV-Luc-Alfonsi.pdf" download="CV-Luc-Alfonsi.pdf">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Je veux voir le CV&#8239;!
+      </a>
+      <p class="cta-mail">Une question&#8239;? <a href="mailto:alfonsi.groupe@gmail.com">alfonsi.groupe@gmail.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>© 2026 Luc Alfonsi, Lyon et Paris</p>
+    <p>Codé en HTML, CSS et JavaScript, sans framework.</p>
+    <p><a href="#accueil">Revenir en haut</a></p>
+  </div>
+</footer>
+
+<div class="hitbar" id="hitbar" hidden>
+  <span class="hitbar-label" id="hitbar-label"></span>
+  <button type="button" id="hit-prev" aria-label="Résultat précédent"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <button type="button" id="hit-next" aria-label="Résultat suivant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <button type="button" id="hit-close" aria-label="Effacer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11m0-11-11 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+</div>
+</body>
+</html>
