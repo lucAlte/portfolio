@@ -838,3 +838,25 @@ mark.hit.is-current {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Lien vers le projet en ligne */
+.case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  margin-top: 22px;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: #fff;
+  color: #0d0d0d;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.case-link svg { width: 18px; height: 18px; }
+.case-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(255, 110, 50, .36), 0 0 0 1px rgba(255, 170, 120, .35);
+}

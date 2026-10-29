@@ -10,6 +10,7 @@ Site statique en HTML, CSS et JavaScript, sans framework ni étape de build. Tou
 | `style.css` | Mise en page |
 | `script.js` | Anneau animé du hero, machine à écrire, recherche dans la page |
 | `inter-latin.woff2` | Police Inter, auto-hébergée |
+| `ridedeck-ecran.png` | Visuel RideDeck |
 | `callio-jeu-ecriture.png` | Visuel Callio |
 | `CV-Luc-Alfonsi.pdf` | CV téléchargeable |
 
